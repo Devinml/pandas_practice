@@ -56,3 +56,94 @@ Sample Python dictionary data and list labels:
 Write a Pandas program to select the rows where the score is missing, i.e. is NaN. Go to the editor
 Sample Python dictionary data and list labels:
 '''
+
+#print(df.loc[df['score'].isnull()])
+
+'''
+Write a Pandas program to select the rows the score is between 15 and 20 (inclusive). Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#print(df[(df['score'] >= 15) & (df['score']<= 20)])
+
+'''
+ Write a Pandas program to select the rows where number of attempts in the examination is 
+ less than 2 and score greater than 15
+'''
+
+#print(df[(df['attempts'] < 2)&(df['score'] > 15)])
+
+'''
+Write a Pandas program to change the score in row 'd' to 11.5. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#df.loc['d','score'] = 11.5
+#print(df.loc['d','score'])
+
+'''
+Write a Pandas program to calculate the sum of the examination attempts by the students. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+
+#print(df['attempts'].sum())
+
+'''
+Write a Pandas program to calculate the mean score for each different student in DataFrame. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+
+#print(df['score'].mean())
+
+'''
+Write a Pandas program to append a new row 'k' to data frame with given values for each column.
+ Now delete the new row and return the original DataFrame
+'''
+#row_k = {'name':'Jim','score': 20, 'attempts': 100, 'qualify':'yes'}
+#df.loc['k'] = row_k
+#print(df)
+#df.drop('k',inplace=True)
+#print(df.tail())
+
+'''
+Write a Pandas program to sort the DataFrame first by 'name' in descending order, then by 'score' in ascending order. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#print(df.sort_values(by = ['name','score'],ascending=[False,True]))
+
+'''
+Write a Pandas program to replace the 'qualify' column contains the values 'yes' and 'no' with True and False. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+
+#def yes_to_true(input_string):
+#    if 'yes' in input_string:
+#        return True
+#    else:
+#        return False
+#df['qualify'] = df['qualify'].apply(lambda x : yes_to_true(x))
+#print(df)
+
+'''
+Write a Pandas program to change the name 'James' to 'Suresh' in name column of the DataFrame. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#df.loc[df['name'] == 'James','name'] = 'Suresh'
+#print(df.loc['d'])
+
+'''
+Write a Pandas program to delete the 'attempts' column from the DataFrame. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#df.pop('attempts')
+#print(df)
+
+'''
+Write a Pandas program to insert a new column in existing DataFrame. Go to the editor
+Sample Python dictionary data and list labels:
+'''
+#df['color'] = ['Red','Blue','Green','Violet','Rainbow','Orange','Magenta','Pink','Black','White']
+#print(df)
+
+'''
+
+'''
+

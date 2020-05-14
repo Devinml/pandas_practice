@@ -26,6 +26,13 @@ axes_2.plot(data['month_number'],data['bathingsoap'],color='green',marker='o',la
 axes_2.plot(data['month_number'],data['shampoo'],color='blue',marker='o',label='Shampoo')
 axes_2.plot(data['month_number'],data['moisturizer'],color='black',marker='o',label='Moisturizer')
 axes_2.legend(loc='upper left')
+plt.xticks(range(1,13,1))
+
+fig_3 = plt.scatter(data['month_number'],data['toothpaste'])
+#axes_3 = fig_3.add_axes([.14,.1,.8,.8])
+#axes_3.set_xlabel('Month Number')
+#axes_3.set_ylabel('Toothpaste Units Sold')
+#axes_3.plot(data['month_number'],data['toothpaste'])
 
 
 
